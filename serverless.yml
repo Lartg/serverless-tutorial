@@ -1,10 +1,14 @@
 service: my-express-application
 
 plugins:
+  - serverless-dynamodb-local
   - serverless-offline   
 
 custom:
   tableName: 'users-table-${self:provider.stage}'
+  dynamodb:
+    start:
+      migrate: true
  
 provider:
   name: aws
@@ -31,14 +35,14 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
-  # getUser:
-  #   handler: index.handler
-  #   events:
-  #     - http: 'GET /users/{proxy+}'
-  # createUser:
-  #   handler: index.handler
-  #   events:
-  #     - http: 'POST /users'
+  getUser:
+    handler: index.handler
+    events:
+      - http: 'GET /users/{proxy+}'
+  createUser:
+    handler: index.handler
+    events:
+      - http: 'POST /users'
  
 resources:
   Resources:

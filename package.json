@@ -1,0 +1,24 @@
+{
+  "name": "serverless-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lartg/serverless-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lartg/serverless-tutorial/issues"
+  },
+  "homepage": "https://github.com/Lartg/serverless-tutorial#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "serverless-http": "^3.0.1"
+  }
+}

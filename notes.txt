@@ -1,0 +1,2 @@
+$ curl -H "Content-Type: application/json" -X POST ${BASE_DOMAIN}/users -d '{"userId": "lartg", "name": "Arthur"}'
+$ curl -H "Content-Type: application/json" -X GET ${BASE_DOMAIN}/users/lartg
